@@ -1,0 +1,22 @@
+extends ../intercessor-layout
+
+block content
+  .readable
+    p.
+      Acesta este un generator de pseudoromână care este echivalentul lui <a
+      href="http://ro.lipsum.com/">Lorem ipsum</a> pentru limba română, adică
+      folosește literele specifice limbii române. Dar spre diferență de Lorem
+      ipsum, acest generator adaugă și numere, paranteze, ghilimele, linii de
+      pauză și puncte de suspensie.
+
+    p.
+      Acest tip de generator se poate folosi, spre exemplu, pentru a testa un
+      font nou pentru a vedea dacă afișează cum trebuie literele românești
+      corecte.
+
+    p
+      button#generateNewBtn.btn.btn-info Generează altul
+
+    // googleoff: all
+    #generatedText
+    // googleon: all
