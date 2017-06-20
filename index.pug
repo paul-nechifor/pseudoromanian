@@ -1,0 +1,46 @@
+doctype html
+html(lang='en')
+  head
+    title= title
+    meta(charset='utf-8')
+    style: :stylus(compress=true)
+      max-width = 600px
+      body
+        font-size 1.2em
+        line-height 1.4
+      .header, .middle, .footer
+        margin 0 auto
+        max-width max-width
+      .footer
+        padding-top 1em
+      a
+        text-decoration none
+        &:hover
+          text-decoration underline
+
+  body: .header: :markdown-it
+
+    # [Pseudoromână](.)
+
+    Acesta este un generator de pseudoromână care este echivalentul lui [Lorem
+    ipsum][lorem] pentru limba română, adică folosește literele specifice limbii
+    române. Dar spre diferență de Lorem ipsum, acest generator adaugă și numere,
+    paranteze, ghilimele, linii de pauză și puncte de suspensie.
+
+    Acest tip de generator se poate folosi, spre exemplu, pentru a testa un
+    font nou pentru a vedea dacă afișează cum trebuie literele românești
+    corecte.
+
+    [lorem]: http://ro.lipsum.com/
+
+  .middle
+    p: button#generate-new-btn.btn.btn-info Generează altul
+
+    // googleoff: all
+    #generated-text
+    // googleon: all
+
+  .footer: :markdown-it
+    Created by [Paul Nechifor](/).
+
+  script !{js}
