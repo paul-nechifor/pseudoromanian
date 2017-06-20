@@ -18,29 +18,29 @@ html(lang='en')
         &:hover
           text-decoration underline
 
-  body: .header: :markdown-it
+  body
+    .header: :markdown-it
+      # [Pseudoromână](.)
 
-    # [Pseudoromână](.)
+      Acesta este un generator de pseudoromână care este echivalentul lui [Lorem
+      ipsum][lorem] pentru limba română, adică folosește literele specifice limbii
+      române. Dar spre diferență de Lorem ipsum, acest generator adaugă și numere,
+      paranteze, ghilimele, linii de pauză și puncte de suspensie.
 
-    Acesta este un generator de pseudoromână care este echivalentul lui [Lorem
-    ipsum][lorem] pentru limba română, adică folosește literele specifice limbii
-    române. Dar spre diferență de Lorem ipsum, acest generator adaugă și numere,
-    paranteze, ghilimele, linii de pauză și puncte de suspensie.
+      Acest tip de generator se poate folosi, spre exemplu, pentru a testa un
+      font nou pentru a vedea dacă afișează cum trebuie literele românești
+      corecte.
 
-    Acest tip de generator se poate folosi, spre exemplu, pentru a testa un
-    font nou pentru a vedea dacă afișează cum trebuie literele românești
-    corecte.
+      [lorem]: http://ro.lipsum.com/
 
-    [lorem]: http://ro.lipsum.com/
+    .middle
+      p: button#generate-new-btn.btn.btn-info Generează altul
 
-  .middle
-    p: button#generate-new-btn.btn.btn-info Generează altul
+      // googleoff: all
+      #generated-text
+      // googleon: all
 
-    // googleoff: all
-    #generated-text
-    // googleon: all
+    .footer: :markdown-it
+      Created by [Paul Nechifor](/).
 
-  .footer: :markdown-it
-    Created by [Paul Nechifor](/).
-
-  script !{js}
+    script !{js}
