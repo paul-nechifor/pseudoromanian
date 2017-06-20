@@ -1,6 +1,6 @@
 {
   "name": "pseudoromanian",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Text generator similar to Lorem Ipsum, but with Romanian letters.",
   "devDependencies": {
     "babel-core": "^6.25.0",
