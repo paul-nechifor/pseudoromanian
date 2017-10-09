@@ -7,6 +7,7 @@ html(lang='ro')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     meta(name='description', content='Un generator echivalent cu „Lorem ipsum“, dar pentru limba română.')
     link(rel='apple-touch-icon', href='/favicon152.png')
+
     style: :stylus(compress=true)
       max-width = 600px
       body
@@ -17,6 +18,10 @@ html(lang='ro')
         max-width max-width
       .footer
         padding-top 1em
+        small
+          color #999
+          a
+            color #888
       a
         text-decoration none
         &:hover
@@ -40,7 +45,14 @@ html(lang='ro')
       #generated-text
       // googleon: all
 
-    .footer: :markdown-it
-      Created by [Paul Nechifor](/).
+    .footer
+      :markdown-it
+        Created by [Paul Nechifor](/). [View the Git source.](https://github.com/paul-nechifor/pseudoromanian)
+
+      small: :markdown-it
+        [Home](/) •
+        [Blog](/blog) •
+        [Projects](/projects) •
+        [Twitter](https://twitter.com/PaulNechifor)
 
     script !{js}
